@@ -39,6 +39,9 @@ RUN \
 	/var/lib/apt/lists/* \
 	/var/tmp/*
 
+RUN \
+ pip3 install --upgrade --force-reinstall six
+
 # add local files
 COPY root/ /
 
