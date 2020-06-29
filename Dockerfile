@@ -33,12 +33,14 @@ RUN \
 	unrar \
 	unzip \
 	python3-pip && \
- pip install --upgrade six && \
  echo "**** cleanup ****" && \
  rm -rf \
 	/tmp/* \
 	/var/lib/apt/lists/* \
 	/var/tmp/*
+
+RUN \
+ pip install --upgrade six
 
 # add local files
 COPY root/ /
