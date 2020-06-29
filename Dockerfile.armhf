@@ -31,9 +31,7 @@ RUN \
 	python3-requests \
 	p7zip-full \
 	unrar \
-	unzip \
-	python3-pip && \
- pip install --upgrade six && \
+	unzip && \
  echo "**** cleanup ****" && \
  rm -rf \
 	/tmp/* \
