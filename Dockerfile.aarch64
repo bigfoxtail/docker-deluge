@@ -31,12 +31,16 @@ RUN \
 	python3-requests \
 	p7zip-full \
 	unrar \
-	unzip && \
+	unzip \
+	python3-pip && \
  echo "**** cleanup ****" && \
  rm -rf \
 	/tmp/* \
 	/var/lib/apt/lists/* \
 	/var/tmp/*
+
+RUN \
+ pip3 install --upgrade --force-reinstall six
 
 # add local files
 COPY root/ /
