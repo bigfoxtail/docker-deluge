@@ -40,7 +40,7 @@ RUN \
 	/var/tmp/*
 
 RUN \
- pip install --upgrade six
+ pip install --upgrade --force-reinstall six
 
 # add local files
 COPY root/ /
